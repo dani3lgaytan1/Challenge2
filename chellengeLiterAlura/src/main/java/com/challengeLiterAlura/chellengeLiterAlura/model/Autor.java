@@ -40,11 +40,13 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor{" +
-                "nombre='" + nombre + '\'' +
-                ", anioNacimiento=" + anioNacimiento +
-                ", anioMuerte=" + anioMuerte +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Autor {\n")
+                .append("  Nombre: '").append(nombre).append("',\n")
+                .append("  Año de Nacimiento: ").append(anioNacimiento != null ? anioNacimiento : "N/A").append(",\n")
+                .append("  Año de Muerte: ").append(anioMuerte != null ? anioMuerte : "N/A").append("\n")
+                .append("}");
+        return sb.toString();
     }
 
     public  Autor(String nombre, Integer anoNacimiento, Integer anoMuerte){

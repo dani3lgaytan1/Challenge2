@@ -43,12 +43,16 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro{" +
-                "titulo='" + titulo + '\'' +
-                ", numeroDescargas=" + numeroDescargas +
-                ", autores=" + autores +
-                ", idioma = "+ idioma+
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Libro {\n")
+                .append("  Título: '").append(titulo).append("',\n")
+                .append("  Número de Descargas: ").append(numeroDescargas).append(",\n")
+                .append("  Idioma: '").append(idioma).append("'\n")
+
+                .append('}');
+
+
+        return sb.toString();
     }
 
     public Libro(DatosLibro datosLibro){
